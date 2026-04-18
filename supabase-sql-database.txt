@@ -1,0 +1,198 @@
+-- WARNING: This schema is for context only and is not meant to be run.
+-- Table order and constraints may not be valid for execution.
+
+CREATE TABLE public.activity_logs (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  patient_id uuid NOT NULL,
+  activity_type text NOT NULL,
+  duration_min smallint NOT NULL CHECK (duration_min > 0),
+  intensity text NOT NULL DEFAULT 'moderate'::text CHECK (intensity = ANY (ARRAY['light'::text, 'moderate'::text, 'intense'::text])),
+  calories_burned smallint CHECK (calories_burned >= 0),
+  notes text,
+  logged_at timestamp with time zone NOT NULL DEFAULT now(),
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  CONSTRAINT activity_logs_pkey PRIMARY KEY (id),
+  CONSTRAINT activity_logs_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.appointments (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  doctor_id uuid NOT NULL,
+  patient_id uuid NOT NULL,
+  scheduled_at timestamp with time zone NOT NULL,
+  location text,
+  type text DEFAULT 'in-person'::text CHECK (type = ANY (ARRAY['in-person'::text, 'remote'::text])),
+  status text DEFAULT 'pending'::text CHECK (status = ANY (ARRAY['pending'::text, 'confirmed'::text, 'cancelled'::text, 'completed'::text])),
+  notes text,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT appointments_pkey PRIMARY KEY (id),
+  CONSTRAINT appointments_doctor_id_fkey FOREIGN KEY (doctor_id) REFERENCES public.profiles(id),
+  CONSTRAINT appointments_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.doctor_notes (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  doctor_id uuid NOT NULL,
+  patient_id uuid NOT NULL,
+  body text NOT NULL,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT doctor_notes_pkey PRIMARY KEY (id),
+  CONSTRAINT doctor_notes_doctor_id_fkey FOREIGN KEY (doctor_id) REFERENCES public.profiles(id),
+  CONSTRAINT doctor_notes_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.doctor_patient (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  doctor_id uuid NOT NULL,
+  patient_id uuid NOT NULL,
+  assigned_at timestamp with time zone DEFAULT now(),
+  status text DEFAULT 'accepted'::text CHECK (status = ANY (ARRAY['pending'::text, 'accepted'::text])),
+  CONSTRAINT doctor_patient_pkey PRIMARY KEY (id),
+  CONSTRAINT doctor_patient_doctor_id_fkey FOREIGN KEY (doctor_id) REFERENCES public.profiles(id),
+  CONSTRAINT doctor_patient_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.feed_posts (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  author_id uuid NOT NULL,
+  title text NOT NULL,
+  body text NOT NULL,
+  target_role text DEFAULT 'all'::text CHECK (target_role = ANY (ARRAY['patient'::text, 'doctor'::text, 'all'::text])),
+  image_url text,
+  created_at timestamp with time zone DEFAULT now(),
+  tags ARRAY,
+  media_type text CHECK (media_type = ANY (ARRAY['image'::text, 'youtube'::text, 'link'::text, 'none'::text])),
+  media_url text,
+  is_ai boolean DEFAULT false,
+  target_user_id uuid,
+  CONSTRAINT feed_posts_pkey PRIMARY KEY (id),
+  CONSTRAINT feed_posts_author_id_fkey FOREIGN KEY (author_id) REFERENCES public.profiles(id),
+  CONSTRAINT feed_posts_target_user_id_fkey FOREIGN KEY (target_user_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.instructions (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  doctor_id uuid NOT NULL,
+  patient_id uuid NOT NULL,
+  title text NOT NULL,
+  body text NOT NULL,
+  tag text DEFAULT 'Other'::text CHECK (tag = ANY (ARRAY['Medication'::text, 'Exercise'::text, 'Monitoring'::text, 'Diet'::text, 'Other'::text])),
+  is_urgent boolean DEFAULT false,
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT instructions_pkey PRIMARY KEY (id),
+  CONSTRAINT instructions_doctor_id_fkey FOREIGN KEY (doctor_id) REFERENCES public.profiles(id),
+  CONSTRAINT instructions_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.locations (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  city text NOT NULL,
+  admin_name text NOT NULL,
+  lat numeric,
+  lng numeric,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT locations_pkey PRIMARY KEY (id)
+);
+CREATE TABLE public.measurements (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  patient_id uuid NOT NULL,
+  type text NOT NULL CHECK (type = ANY (ARRAY['blood_pressure'::text, 'weight'::text, 'glucose'::text, 'heart_rate'::text, 'temperature'::text, 'other'::text])),
+  value text NOT NULL,
+  unit text,
+  recorded_at timestamp with time zone DEFAULT now(),
+  note text,
+  CONSTRAINT measurements_pkey PRIMARY KEY (id),
+  CONSTRAINT measurements_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.nutrition_logs (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  patient_id uuid NOT NULL,
+  meal_type text CHECK (meal_type = ANY (ARRAY['breakfast'::text, 'lunch'::text, 'dinner'::text, 'snack'::text])),
+  carb_level text NOT NULL DEFAULT 'medium'::text CHECK (carb_level = ANY (ARRAY['none'::text, 'low'::text, 'medium'::text, 'high'::text])),
+  description text,
+  carb_grams smallint CHECK (carb_grams >= 0),
+  water_glasses smallint DEFAULT 0 CHECK (water_glasses >= 0 AND water_glasses <= 20),
+  logged_at timestamp with time zone NOT NULL DEFAULT now(),
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  CONSTRAINT nutrition_logs_pkey PRIMARY KEY (id),
+  CONSTRAINT nutrition_logs_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.post_likes (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  user_id uuid NOT NULL,
+  post_id uuid NOT NULL,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT post_likes_pkey PRIMARY KEY (id),
+  CONSTRAINT post_likes_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.profiles(id),
+  CONSTRAINT post_likes_post_id_fkey FOREIGN KEY (post_id) REFERENCES public.feed_posts(id)
+);
+CREATE TABLE public.profiles (
+  id uuid NOT NULL,
+  role text NOT NULL CHECK (role = ANY (ARRAY['patient'::text, 'doctor'::text, 'admin'::text])),
+  full_name text,
+  phone text,
+  avatar_url text,
+  created_at timestamp with time zone DEFAULT now(),
+  birth_date date,
+  gender text CHECK (gender = ANY (ARRAY['male'::text, 'female'::text])),
+  weight_kg numeric,
+  height_cm numeric,
+  wilaya text,
+  commune text,
+  diabetes_type text CHECK (diabetes_type = ANY (ARRAY['type1'::text, 'type2'::text, 'gestational'::text, 'prediabetes'::text, 'other'::text])),
+  diagnosis_year integer,
+  hba1c numeric,
+  target_glucose_min integer DEFAULT 80,
+  target_glucose_max integer DEFAULT 180,
+  insulin_regimen text CHECK (insulin_regimen = ANY (ARRAY['none'::text, 'basal_only'::text, 'basal_bolus'::text, 'pump'::text, 'premixed'::text])),
+  uses_cgm boolean DEFAULT false,
+  activity_level text CHECK (activity_level = ANY (ARRAY['sedentary'::text, 'light'::text, 'moderate'::text, 'active'::text, 'very_active'::text])),
+  has_hypertension boolean DEFAULT false,
+  has_dyslipidemia boolean DEFAULT false,
+  emergency_contact_name text,
+  emergency_contact_phone text,
+  profile_complete boolean DEFAULT false,
+  updated_at timestamp with time zone DEFAULT now(),
+  specialization text,
+  medical_license text,
+  hospital_name text,
+  experience_years integer,
+  bio text,
+  work_lat numeric,
+  work_lng numeric,
+  is_emergency_active boolean DEFAULT false,
+  emergency_lat numeric,
+  emergency_lng numeric,
+  expo_push_token text,
+  CONSTRAINT profiles_pkey PRIMARY KEY (id),
+  CONSTRAINT profiles_id_fkey FOREIGN KEY (id) REFERENCES auth.users(id)
+);
+CREATE TABLE public.tracker_logs (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  patient_id uuid NOT NULL,
+  logged_date date NOT NULL DEFAULT CURRENT_DATE,
+  steps integer DEFAULT 0,
+  calories integer DEFAULT 0,
+  water_ml integer DEFAULT 0,
+  active_mins integer DEFAULT 0,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT tracker_logs_pkey PRIMARY KEY (id),
+  CONSTRAINT tracker_logs_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.user_searches (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  user_id uuid NOT NULL,
+  query text NOT NULL,
+  created_at timestamp with time zone DEFAULT now(),
+  CONSTRAINT user_searches_pkey PRIMARY KEY (id),
+  CONSTRAINT user_searches_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.profiles(id)
+);
+CREATE TABLE public.wellbeing_logs (
+  id uuid NOT NULL DEFAULT gen_random_uuid(),
+  patient_id uuid NOT NULL,
+  symptoms ARRAY DEFAULT '{}'::text[],
+  mood text CHECK (mood = ANY (ARRAY['great'::text, 'good'::text, 'neutral'::text, 'tired'::text, 'stressed'::text, 'anxious'::text])),
+  sleep_hours numeric CHECK (sleep_hours >= 0::numeric AND sleep_hours <= 24::numeric),
+  sleep_quality text CHECK (sleep_quality = ANY (ARRAY['poor'::text, 'fair'::text, 'good'::text, 'excellent'::text])),
+  stress_level smallint CHECK (stress_level >= 1 AND stress_level <= 5),
+  notes text,
+  logged_at timestamp with time zone NOT NULL DEFAULT now(),
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  CONSTRAINT wellbeing_logs_pkey PRIMARY KEY (id),
+  CONSTRAINT wellbeing_logs_patient_id_fkey FOREIGN KEY (patient_id) REFERENCES public.profiles(id)
+);

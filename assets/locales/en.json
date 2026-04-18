@@ -1,0 +1,682 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "version": "Version",
+    "sign_out": "Sign Out",
+    "confirm_sign_out": "Are you sure you want to sign out?",
+    "done": "Done",
+    "back": "Back",
+    "edit": "Edit",
+    "delete": "Delete",
+    "reading": "Reading",
+    "timing": "——— OR ———",
+    "notes": "Notes",
+    "insulin": "Insulin",
+    "medication": "Medication",
+    "mood": "Mood",
+    "stress_level": "Stress Level",
+    "hypo_symptoms": "Low Blood Sugar Symptoms (Hypo)",
+    "hyper_symptoms": "High Blood Sugar Symptoms (Hyper)",
+    "hours_slept": "Hours Slept",
+    "quality": "Quality",
+    "search": "Search...",
+    "no_data": "No data available",
+    "map": "Map",
+    "call": "Call",
+    "sms": "SMS",
+    "hospital": "Hospital",
+    "clinic": "Clinic",
+    "symptoms": "symptoms",
+    "select_option": "Select an option",
+    "doctor": "Doctor",
+    "distance_m": "{{dist}}m",
+    "distance_km": "{{dist}}km",
+    "no_matches": "No matches found.",
+    "options": "Options",
+    "info": "Info",
+    "low": "Low",
+    "high": "High",
+    "required": "Required",
+    "select_activity": "Select or enter an activity.",
+    "enter_duration": "Enter a duration in minutes.",
+    "delete_activity": "Remove this activity?",
+    "delete_meal": "Remove this meal?"
+  },
+  "periods": {
+    "today": "Today",
+    "week": "Last 7 Days",
+    "month": "Last 30 Days",
+    "week_short": "1 Week",
+    "month_short": "1 Month",
+    "three_months": "Last 90 Days",
+    "three_months_short": "3 Months"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "Account",
+    "preferences": "Preferences",
+    "support": "Support",
+    "edit_profile": "Edit Profile",
+    "edit_health_profile": "Edit Health Profile",
+    "change_email_password": "Account Settings",
+    "push_notifications": "Push Notifications",
+    "appearance": "Appearance",
+    "language": "Language",
+    "help_center": "Help Center",
+    "terms_of_service": "Terms of Service",
+    "privacy_policy": "Privacy Policy",
+    "current_email": "Current Email",
+    "change_email": "Change Email",
+    "new_email": "New email address",
+    "change_password": "Change Password",
+    "new_password": "New password (min 6 chars)",
+    "confirm_password": "Confirm new password",
+    "email_hint": "Changing your email will send a confirmation to the new address before it takes effect.",
+    "full_name_placeholder": "Your full name",
+    "phone_placeholder": "Your phone number",
+    "bio_hint": "For full health profile editing, visit the Profile section.",
+    "theme": {
+      "light": "Light Mode",
+      "dark": "Dark Mode",
+      "system": "System Default"
+    }
+  },
+  "languages": {
+    "en": "English",
+    "fr": "French",
+    "ar": "Arabic"
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to monitor your health",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Forgot password?",
+      "login_btn": "Log In",
+      "no_account": "Don't have an account?",
+      "sign_up": "Sign Up",
+      "error_missing": "Please enter your email and password."
+    },
+    "signup": {
+      "title": "Join Us",
+      "subtitle": "Start your health journey today",
+      "full_name": "Full Name",
+      "phone": "Phone Number",
+      "role": "I am a...",
+      "roles": {
+        "patient": "Patient",
+        "doctor": "Doctor"
+      },
+      "signup_btn": "Create Account",
+      "has_account": "Already have an account?",
+      "login": "Log In"
+    }
+  },
+  "enums": {
+    "gender": {
+      "male": "Male",
+      "female": "Female"
+    },
+    "diabetes_type": {
+      "type1": "Type 1",
+      "type2": "Type 2",
+      "gestational": "Gestational",
+      "prediabetes": "Pre-diabetes",
+      "other": "Other"
+    },
+    "insulin_regimen": {
+      "none": "None",
+      "basal_only": "Basal only",
+      "basal_bolus": "Basal + Bolus",
+      "pump": "Insulin pump",
+      "premixed": "Pre-mixed"
+    },
+    "activity_level": {
+      "sedentary": "Sedentary",
+      "light": "Light",
+      "moderate": "Moderate",
+      "active": "Active",
+      "very_active": "Very Active"
+    },
+    "specialization": {
+      "endocrinologist": "Endocrinologist",
+      "diabetologist": "Diabetologist",
+      "general_practitioner": "General Practitioner",
+      "internal_medicine": "Internal Medicine",
+      "cardiologist": "Cardiologist",
+      "nutritionist": "Nutritionist",
+      "pediatrician": "Pediatrician",
+      "other": "Other"
+    },
+    "diabetes_desc": {
+      "type1": "Autoimmune, insulin dependent",
+      "type2": "Insulin resistance",
+      "gestational": "During pregnancy",
+      "prediabetes": "At risk",
+      "other": "LADA, MODY, etc."
+    }
+  },
+  "health_profile_hints": {
+    "cgm_desc": "Continuous Glucose Monitor",
+    "hypertension_desc": "High blood pressure",
+    "dyslipidemia_desc": "Abnormal lipid levels",
+    "emergency_placeholder": "Parent, sibling, or friend"
+  },
+  "patient": {
+    "feed": {
+      "tabs": {
+        "for_you": "For You",
+        "community": "Community",
+        "ai_consult": "AI Consult"
+      },
+      "ai_consult": {
+        "title": "Private AI Insight",
+        "placeholder": "Ask AI about your health logs...",
+        "ask": "Ask AI",
+        "success": "AI consultation generated based on your health logs!"
+      },
+      "sponsored": "Sponsored",
+      "empty": "No posts here yet.",
+      "create": {
+        "title": "Create Post",
+        "next": "Next →",
+        "tagging": "Tagging...",
+        "post": "Post",
+        "media_added": "Media Added ✓",
+        "add_media": "Add Photo / YouTube / Link",
+        "pick_image": "Tap to choose a photo",
+        "remove_image": "Remove photo",
+        "paste_url": "— or paste a YouTube / Website URL —",
+        "detected": "Detected",
+        "ai_tagged": "✨ AI tagged as {{tags}}. Adjust if needed:",
+        "choose_cats": "Choose categories for your post:"
+      },
+      "learn_more": "Learn More",
+      "anonymous": "Community Member"
+    },
+    "tracker": {
+      "title": "Daily Wellness",
+      "subtitle": "Your vital signs today",
+      "export": "Export Report",
+      "log": "Log data",
+      "rings": {
+        "glucose": "Blood Glucose",
+        "activity": "Activity",
+        "nutrition": "Nutrition",
+        "wellbeing": "Wellbeing"
+      },
+      "charts": {
+        "glucose_empty": "Log at least 2 readings to see the chart",
+        "nutrition_empty": "No meals logged today",
+        "activity_empty": "No activity logged today",
+        "wellbeing_empty": "Log wellbeing entries to see mood trend"
+      },
+      "units": {
+        "glucose": "mg/dL",
+        "water": "glasses",
+        "active_min": "min active",
+        "sleep": "h sleep"
+      },
+      "placeholders": {
+        "no_readings": "No readings yet",
+        "meals_logged": "{{count}} meals logged",
+        "sessions_logged": "{{count}} sessions today",
+        "sleep_last_night": "{{count}}h sleep last night",
+        "activity_example": "e.g. Skipping rope",
+        "duration_example": "30",
+        "calories_example": "200",
+        "carbs_example": "e.g. 45",
+        "meal_description_example": "e.g. Rice with chicken"
+      },
+      "pdf": {
+        "date_label": "Report Date",
+        "period_label": "Period",
+        "value": "Value",
+        "unit": "Unit",
+        "timing_col": "Timing",
+        "meal_type": "Meal Type",
+        "carbs": "Carbs",
+        "activity_col": "Activity",
+        "duration": "Duration",
+        "intensity": "Intensity",
+        "mood_col": "Mood",
+        "sleep_col": "Sleep"
+      },
+      "pdf_title": "Daily Report (CareAlly)",
+      "of_goal": "of goal",
+      "steps_today": "steps today",
+      "weekly_overview": "WEEKLY OVERVIEW",
+      "timing": {
+        "fasting": "Fasting",
+        "before_breakfast": "Before Breakfast",
+        "after_breakfast": "After Breakfast",
+        "before_lunch": "Before Lunch",
+        "after_lunch": "After Lunch",
+        "before_dinner": "Before Dinner",
+        "after_dinner": "After Dinner",
+        "bedtime": "Bedtime",
+        "random": "Random",
+        "night": "Night"
+      },
+      "meal_type": {
+        "breakfast": "Breakfast",
+        "lunch": "Lunch",
+        "dinner": "Dinner",
+        "snack": "Snack"
+      },
+      "carb_level": {
+        "none": "None",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High"
+      },
+      "intensity": {
+        "light": "Light",
+        "moderate": "Moderate",
+        "intense": "Intense"
+      },
+      "mood": {
+        "great": "Great",
+        "good": "Good",
+        "neutral": "Neutral",
+        "tired": "Tired",
+        "stressed": "Stressed",
+        "anxious": "Anxious"
+      },
+      "hypo_symptoms": {
+        "dizziness": "Dizziness",
+        "sweating": "Sweating",
+        "shaking": "Shaking",
+        "hunger": "Hunger",
+        "palpitations": "Palpitations",
+        "confusion": "Confusion"
+      },
+      "hyper_symptoms": {
+        "thirst": "Thirst",
+        "urination": "Frequent Urination",
+        "blurred": "Blurred Vision",
+        "fatigue": "Fatigue",
+        "headache": "Headache",
+        "nausea": "Nausea"
+      },
+      "sleep_quality": {
+        "poor": "Poor",
+        "fair": "Fair",
+        "good": "Good",
+        "excellent": "Excellent"
+      },
+      "activities": {
+        "walking": "Walking",
+        "running": "Running",
+        "cycling": "Cycling",
+        "swimming": "Swimming",
+        "judo": "Judo",
+        "football": "Football",
+        "basketball": "Basketball",
+        "yoga": "Yoga",
+        "gym": "Gym",
+        "dancing": "Dancing",
+        "hiking": "Hiking",
+        "other": "Other"
+      },
+      "intensity_desc": {
+        "light": "Easy, no sweat",
+        "moderate": "Some effort, light sweat",
+        "intense": "Hard effort, heavy sweat"
+      },
+      "labels": {
+        "calories_burned": "Calories burned",
+        "calories_burned_opt": "Calories burned (optional)",
+        "intensity": "Intensity",
+        "today_sessions": "Today's sessions",
+        "carbs_optional": "Carbs (g) — optional",
+        "description_optional": "Description — optional",
+        "today_meals": "Today's meals",
+        "meal": "Meal"
+      },
+      "carb_desc": {
+        "none": "No carbs / water only",
+        "low": "Salad, eggs, meat",
+        "medium": "Rice, bread (small)",
+        "high": "Pasta, sweets, bread"
+      }
+    },
+    "explore": {
+      "title": "Explore",
+      "search": "Search activities...",
+      "filters": {
+        "all": "All",
+        "running": "Running",
+        "yoga": "Yoga",
+        "cycling": "Cycling"
+      }
+    },
+    "nearby": {
+      "title": "Medical Near Me",
+      "search": "Search hospitals, clinics...",
+      "emergency_alert": "🚨 EMERGENCY",
+      "patient_sos": "Patient Requesting Assistance",
+      "distance": "away",
+      "sos_title": "SOS: Patient in Need",
+      "sos_desc": "Emergency alert broadcasted nearby. Can you assist?",
+      "sos_sms": "I saw your SOS on the map. I am nearby and can assist."
+    },
+    "doctor": {
+      "title": "My Doctor",
+      "find": "Find a Doctor",
+      "search_placeholder": "Search by name or specialty...",
+      "no_doctors": "NO DOCTORS FOUND",
+      "active_count": "{{count}} available doctors",
+      "available": "AVAILABLE DOCTORS",
+      "next_appointment": "NEXT APPOINTMENT",
+      "no_appointments": "No upcoming appointments",
+      "contact": "CONTACT",
+      "notes": "MEDICAL INSTRUCTIONS & NOTES",
+      "no_notes": "No medical notes recorded yet.",
+      "filter": "Filter by name...",
+      "away": "{{distance}} away",
+      "no_doctors_area": "No doctors available in your area yet. Try searching for another name.",
+      "phone": "Phone",
+      "workplace": "Workplace",
+      "new_note_title": "New Medical Note",
+      "note_placeholder": "Type your notes or instructions for the patient...",
+      "send_note": "Send Note",
+      "appointment_types": {
+        "remote": "Remote",
+        "in_person": "In Person"
+      }
+    },
+    "sos": {
+      "title": "Emergency SOS",
+      "instruction": "Emergency assistance is one tap away.",
+      "call_contact": "Call Emergency Contact",
+      "send_sms": "Send SMS Alert",
+      "sms_subtitle": "Send location & alert via text",
+      "broadcast": "Broadcast to Community",
+      "broadcast_subtitle": "Share your location on the map",
+      "broadcasting": "Broadcasting Location",
+      "broadcasting_subtitle": "Tap to stop broadcasting",
+      "nearby_subtitle": "Find hospitals, doctors & pharmacies",
+      "nearby": "Find Nearby Help",
+      "danger_text": "If you are in immediate danger, please call national emergency services.",
+      "no_contact_warning": "No emergency contact set. Please add one in your health profile.",
+      "or_divider": "——— OR ———",
+      "broadcast_message": "🆘 EMERGENCY ALERT: {{name}} needs immediate assistance! Please call or help if nearby."
+    },
+    "health_profile": {
+      "title": "Health Profile",
+      "save_success": "Health profile updated!",
+      "sections": {
+        "personal": "Personal Information",
+        "medical": "Medical Information",
+        "emergency": "Emergency Contact"
+      },
+      "fields": {
+        "full_name": "Full Name",
+        "phone": "Phone Number",
+        "gender": "Gender",
+        "birth_date": "Date of Birth",
+        "weight": "Weight (kg)",
+        "height": "Height (cm)",
+        "wilaya": "Wilaya (Province)",
+        "commune": "Commune / City",
+        "diabetes_type": "Diabetes Type",
+        "diagnosis_year": "Year of Diagnosis",
+        "hba1c": "Average HbA1c (%)",
+        "target_min": "Target Min (mg/dL)",
+        "target_max": "Target Max (mg/dL)",
+        "insulin_regimen": "Insulin Regimen",
+        "activity_level": "Activity Level",
+        "uses_cgm": "Uses CGM",
+        "hypertension": "Hypertension",
+        "dyslipidemia": "Dyslipidemia",
+        "contact_name": "Contact Name",
+        "contact_phone": "Contact Phone",
+        "select_date": "Select date"
+      }
+    },
+    "profile": {
+      "title": "Profile",
+      "bio_placeholder": "Write something about yourself...",
+      "edit_btn": "Edit Profile",
+      "stats": {
+        "glucose": "Avg Glucose",
+        "range": "In Range",
+        "posts": "Posts"
+      }
+    },
+    "instructions": {
+      "title": "Instructions",
+      "subtitle": "Guidelines from your care team"
+    }
+  },
+  "doctor": {
+    "tabs": {
+      "feed": "Feed",
+      "patients": "Patients",
+      "explore": "Explore",
+      "nearby": "Nearby",
+      "profile": "Profile"
+    },
+    "patients": {
+      "title": "Your Patients",
+      "active_count": "{{count}} active patients",
+      "add": "Add",
+      "filter": "Filter by name or phone...",
+      "pending": "Pending Requests",
+      "my_patients": "My Patients",
+      "empty": "No patients found.",
+      "already_linked": "This patient is already in your list.",
+      "add_error": "Could not add patient.",
+      "add_success": "Patient added successfully.",
+      "accept_error": "Could not accept request.",
+      "search_error": "Search Error",
+      "search_exception": "Could not execute search. Try again.",
+      "add_new": "Add New Patient",
+      "search_placeholder": "Search by name or phone...",
+      "link": "Link",
+      "accept": "Accept"
+    },
+    "detail": {
+      "tabs": {
+        "glucose": "Glucose",
+        "nutrition": "Nutrition",
+        "activity": "Activity",
+        "wellbeing": "Wellbeing",
+        "notes": "Notes",
+        "ai": "AI Review"
+      },
+      "ai_review": {
+        "title": "Clinical Summary",
+        "analyzing": "Analyzing patient trends...",
+        "suggested_feedback": "SUGGESTED FEEDBACK",
+        "refresh": "Refresh AI Review",
+        "generate": "Generate Review",
+        "assistant_title": "AI Patient Assistant",
+        "assistant_desc": "Get a professional medical summary and suggested notes for this patient based on their recent tracking logs."
+      },
+      "send_note": "Send New Note",
+      "highlights": {
+        "a1c": "A1c",
+        "weight": "Weight",
+        "target": "Target"
+      },
+      "note_sent": "Note sent to patient.",
+      "note_error": "Could not save note.",
+      "not_found": "Patient not found.",
+      "no_logs": "No logs found for this month.",
+      "no_activity": "No activity logs.",
+      "no_wellbeing": "No wellbeing logs.",
+      "no_notes": "No notes recorded yet.",
+      "new_note_title": "New Medical Note",
+      "note_placeholder": "Type your notes or instructions for the patient..."
+    },
+    "profile": {
+      "title": "My Profile",
+      "not_set": "Not set",
+      "specialization_not_set": "Specialization Not Set",
+      "yrs": "yrs",
+      "exp": "Exp",
+      "professional_details": "Professional Details",
+      "specialization": "Specialization *",
+      "choose_specialty": "Choose specialty",
+      "medical_license": "Medical License ID",
+      "license_number": "License number",
+      "workplace": "Current Workplace",
+      "workplace_placeholder": "Hospital/Clinic name",
+      "experience_years": "Years of Experience",
+      "experience_placeholder": "e.g. 10",
+      "bio": "Professional Bio",
+      "bio_placeholder": "Describe your background...",
+      "work_location": "Work Location",
+      "location_desc": "Set your clinic or hospital location so patients can find you on the map.",
+      "set_current_position": "Set to Current Position",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "specialty_label": "Specialty",
+      "license_label": "License",
+      "workplace_label": "Workplace",
+      "experience_label": "Experience",
+      "no_bio": "No bio provided",
+      "personal_info": "Personal Information",
+      "full_name": "Full Name",
+      "phone": "Phone",
+      "dob": "Date of Birth",
+      "gender": "Gender",
+      "wilaya": "Wilaya *",
+      "select_wilaya": "Select province",
+      "commune": "Commune *",
+      "select_commune": "Select commune",
+      "select_wilaya_first": "First select a wilaya"
+    },
+    "stats": {
+      "title": "Admin Stats",
+      "subtitle": "Platform overview",
+      "logout": "Log out",
+      "total_patients": "Total Patients",
+      "active_doctors": "Active Doctors",
+      "avg_steps": "Avg Daily Steps",
+      "instructions_sent": "Instructions Sent",
+      "recent_activity": "RECENT ACTIVITY"
+    }
+  },
+  "profile_setup": {
+    "personal_info": "Personal Info",
+    "professional_info": "Professional Info",
+    "diabetes_info": "Diabetes Info",
+    "step": "Step",
+    "of": "of",
+    "upload_failed": "Upload Failed",
+    "upload_error": "There was an error saving your image.",
+    "required": "Required",
+    "enter_full_name": "Please enter your full name.",
+    "select_birth_date": "Please select your birth date.",
+    "select_gender": "Please select your gender.",
+    "select_wilaya": "Please select your wilaya.",
+    "select_commune": "Please select your commune.",
+    "select_diabetes_type": "Please select your diabetes type.",
+    "select_specialization": "Please provide your specialization and medical license.",
+    "basic_details": "BASIC DETAILS",
+    "photo_hint": "Professional photo recommended",
+    "body_measurements": "BODY MEASUREMENTS",
+    "location": "LOCATION",
+    "credentials": "CREDENTIALS",
+    "professional_bio": "PROFESSIONAL BIO",
+    "diagnosis": "DIAGNOSIS",
+    "glucose_targets": "GLUCOSE TARGETS (mg/dL)",
+    "treatment": "TREATMENT",
+    "lifestyle": "LIFESTYLE & COMORBIDITIES",
+    "emergency_contact": "EMERGENCY CONTACT",
+    "bmi": "BMI",
+    "step_progress": "Step {{current}} of {{total}}",
+    "back": "Back",
+    "continue": "Continue",
+    "save_continue": "Save & Continue",
+    "male": "Male",
+    "female": "Female",
+    "bmi_label": "BMI",
+    "specialization_label": "Specialization *",
+    "specialization_placeholder": "Choose your specialty",
+    "medical_license_label": "Medical License ID *",
+    "medical_license_placeholder": "License number or ID",
+    "hospital_placeholder": "Hospital or Clinic name",
+    "bio_placeholder": "Briefly describe your expertise...",
+    "diabetes_type_label": "Diabetes Type *",
+    "diagnosis_year_label": "Diagnosis Year",
+    "hba1c_label": "Latest HbA1c (%)",
+    "min_label": "Min",
+    "max_label": "Max",
+    "insulin_regimen_label": "Insulin Regimen",
+    "uses_cgm_label": "Uses CGM (Continuous Glucose Monitor)",
+    "hypertension_label": "Hypertension (high blood pressure)",
+    "dyslipidemia_label": "Dyslipidemia (cholesterol issues)",
+    "contact_name_label": "Contact Name",
+    "contact_phone_label": "Contact Phone",
+    "family_friend_placeholder": "Family member or friend",
+    "diagnosis_year_placeholder": "2015",
+    "hba1c_placeholder": "7.2",
+    "name_placeholder": "Ahmed Benali",
+    "phone_placeholder": "+213 555 000 000",
+    "weight_placeholder": "70",
+    "height_placeholder": "175",
+    "min_placeholder": "80",
+    "max_placeholder": "180",
+    "select_date": "Select date",
+    "full_name_label": "Full Name *",
+    "phone_label": "Phone Number",
+    "birth_date_label": "Birth Date *",
+    "gender_label": "Gender *",
+    "weight_label": "Weight (kg)",
+    "height_label": "Height (cm)",
+    "wilaya_label": "Wilaya *",
+    "commune_label": "Commune *",
+    "hospital_label": "Hospital or Clinic",
+    "experience_label": "Years of Experience",
+    "bio_label": "Professional Bio",
+    "wilaya_placeholder": "Select province",
+    "commune_placeholder": "Select commune",
+    "commune_error": "First select a wilaya",
+    "experience_placeholder": "Example: 10"
+  },
+  "admin": {
+    "tabs": {
+      "stats": "Stats",
+      "users": "Users",
+      "posts": "Posts",
+      "map": "Map"
+    },
+    "users": {
+      "title": "Platform Users",
+      "search": "Search by name or email...",
+      "role_all": "All",
+      "role_patient": "Patients",
+      "role_doctor": "Doctors",
+      "role_admin": "Admins",
+      "joined": "Joined",
+      "phone": "Phone",
+      "no_users": "No users found."
+    },
+    "posts": {
+      "title": "Content Moderation",
+      "search": "Search posts...",
+      "delete_confirm_title": "Delete Post",
+      "delete_confirm_desc": "Are you sure you want to permanently delete this post?",
+      "no_posts": "No posts found.",
+      "author": "Author",
+      "target_role": "Target role"
+    },
+    "map": {
+      "title": "Incident Map",
+      "active_doctors": "Active Doctors",
+      "emergencies": "Emergencies",
+      "sos_alert": "SOS Alert",
+      "doctor": "Doctor Facility"
+    }
+  }
+}

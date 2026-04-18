@@ -1,0 +1,685 @@
+{
+  "common": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "ok": "موافق",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "تم بنجاح",
+    "version": "الإصدار",
+    "sign_out": "تسجيل الخروج",
+    "confirm_sign_out": "هل أنت متأكد من رغبتك في تسجيل الخروج؟",
+    "back": "رجوع",
+    "done": "تم",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "reading": "القراءة",
+    "timing": "——— أو ———",
+    "notes": "ملاحظات",
+    "insulin": "أنسولين",
+    "medication": "دواء",
+    "mood": "الحالة المزاجية",
+    "stress_level": "مستوى التوتر",
+    "hypo_symptoms": "أعراض انخفاض السكر",
+    "hyper_symptoms": "أعراض ارتفاع السكر",
+    "hours_slept": "ساعات النوم",
+    "quality": "الجودة",
+    "search": "بحث...",
+    "no_data": "لا توجد بيانات متاحة",
+    "map": "الخريطة",
+    "call": "اتصال",
+    "sms": "رسالة نصية",
+    "hospital": "مستشفى",
+    "clinic": "عيادة",
+    "symptoms": "أعراض",
+    "select_option": "اختر خيارا",
+    "doctor": "طبيب",
+    "distance_m": "{{dist}} متر",
+    "distance_km": "{{dist}} كلم",
+    "no_matches": "لم يتم العثور على نتائج.",
+    "options": "خيارات",
+    "info": "معلومة",
+    "low": "منخفض",
+    "high": "مرتفع",
+    "required": "مطلوب",
+    "select_activity": "اختر أو أدخل نشاطاً.",
+    "enter_duration": "أدخل المدة بالدقائق.",
+    "delete_activity": "حذف هذا النشاط؟",
+    "delete_meal": "حذف هذه الوجبة؟"
+  },
+  "periods": {
+    "today": "اليوم",
+    "week": "آخر 7 أيام",
+    "month": "آخر 30 يوم",
+    "week_short": "أسبوع",
+    "month_short": "شهر",
+    "three_months": "آخر 90 يوم",
+    "three_months_short": "3 أشهر"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "account": "الحساب",
+    "preferences": "التفضيلات",
+    "support": "الدعم",
+    "edit_profile": "تعديل الملف الشخصي",
+    "edit_health_profile": "تعديل الملف الصحي",
+    "change_email_password": "إعدادات الحساب",
+    "push_notifications": "الإشعارات",
+    "appearance": "المظهر",
+    "language": "اللغة",
+    "help_center": "مركز المساعدة",
+    "terms_of_service": "شروط الخدمة",
+    "privacy_policy": "سياسة الخصوصية",
+    "current_email": "البريد الحالي",
+    "change_email": "تغيير البريد",
+    "new_email": "البريد الإلكتروني الجديد",
+    "change_password": "تغيير كلمة المرور",
+    "new_password": "كلمة المرور الجديدة (6 رموز على الأقل)",
+    "confirm_password": "تأكيد كلمة المرور",
+    "email_hint": "تغيير بريدك الإلكتروني سيرسل تأكيداً إلى العنوان الجديد قبل تفعيله.",
+    "full_name_placeholder": "اسمك الكامل",
+    "phone_placeholder": "رقم هاتفك",
+    "bio_hint": "لتعديل الملف الصحي بالكامل، قم بزيارة قسم الملف الصحي.",
+    "theme": {
+      "light": "الوضع الفاتح",
+      "dark": "الوضع الداكن",
+      "system": "تلقائي"
+    }
+  },
+  "languages": {
+    "en": "الإنجليزية",
+    "fr": "الفرنسية",
+    "ar": "العربية"
+  },
+  "auth": {
+    "login": {
+      "title": "أهلاً بك مجدداً",
+      "subtitle": "سجل الدخول لمتابعة صحتك",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "forgot_password": "نسيت كلمة المرور؟",
+      "login_btn": "تسجيل الدخول",
+      "no_account": "ليس لديك حساب؟",
+      "sign_up": "إنشاء حساب",
+      "error_missing": "يرجى إدخال البريد الإلكتروني وكلمة المرور."
+    },
+    "signup": {
+      "title": "انضم إلينا",
+      "subtitle": "ابدأ رحلتك الصحية اليوم",
+      "full_name": "الاسم الكامل",
+      "phone": "رقم الهاتف",
+      "role": "أنا...",
+      "roles": {
+        "patient": "مريض",
+        "doctor": "طبيب"
+      },
+      "signup_btn": "إنشاء الحساب",
+      "has_account": "لديك حساب بالفعل؟",
+      "login": "تسجيل الدخول"
+    }
+  },
+  "enums": {
+    "gender": {
+      "male": "ذكر",
+      "female": "أنثى"
+    },
+    "diabetes_type": {
+      "type1": "النوع 1",
+      "type2": "النوع 2",
+      "gestational": "سكري الحمل",
+      "prediabetes": "مرحلة ما قبل السكري",
+      "other": "آخر"
+    },
+    "insulin_regimen": {
+      "none": "لا يوجد",
+      "basal_only": "قاعدي فقط",
+      "basal_bolus": "قاعدي + سريع",
+      "pump": "مضخة",
+      "premixed": "مخلوط مسبقاً"
+    },
+    "activity_level": {
+      "sedentary": "خامل",
+      "light": "خفيف",
+      "moderate": "متوسط",
+      "active": "نشط",
+      "very_active": "نشط جداً"
+    },
+    "specialization": {
+      "endocrinologist": "طبيب غدد صماء",
+      "diabetologist": "طبيب سكري",
+      "general_practitioner": "طبيب عام",
+      "internal_medicine": "طب باطني",
+      "cardiologist": "طبيب قلب",
+      "nutritionist": "أخصائي تغذية",
+      "pediatrician": "طبيب أطفال",
+      "other": "آخر"
+    },
+    "diabetes_desc": {
+      "type1": "مناعي ذاتي، معتمد على الأنسولين",
+      "type2": "مقاومة الأنسولين",
+      "gestational": "أثناء الحمل",
+      "prediabetes": "معرض للخطر",
+      "other": "LADA ،MODY، إلخ"
+    }
+  },
+  "health_profile_hints": {
+    "cgm_desc": "جهاز مراقبة الجلوكوز المستمر",
+    "hypertension_desc": "ارتفاع ضغط الدم",
+    "dyslipidemia_desc": "اضطراب مستويات الدهون",
+    "emergency_placeholder": "أحد الأقارب أو صديق"
+  },
+  "patient": {
+    "feed": {
+      "title": "الرئيسية",
+      "tabs": {
+        "for_you": "لك",
+        "community": "المجتمع",
+        "ai_consult": "استشارة ذكية"
+      },
+      "ai_consult": {
+        "title": "مستشار طبي ذكي",
+        "placeholder": "اسأل أي شيء عن صحتك...",
+        "analyzing": "جاري تحليل ملفك...",
+        "ask": "اسأل الذكاء الاصطناعي"
+      },
+      "empty": "لا توجد منشورات بعد. ابدأ النقاش!",
+      "sponsored": "إعلان",
+      "learn_more": "اقرأ المزيد",
+      "anonymous": "عضو المجتمع"
+    },
+    "tracker": {
+      "title": "الصحة اليومية",
+      "subtitle": "مؤشراتك الحيوية اليوم",
+      "export": "تصدير التقرير",
+      "log": "تسجيل بيانات",
+      "rings": {
+        "glucose": "سكر الدم",
+        "activity": "النشاط",
+        "nutrition": "التغذية",
+        "wellbeing": "الحالة العامة"
+      },
+      "charts": {
+        "glucose_empty": "سجل قراءتين على الأقل لرؤية المخطط",
+        "nutrition_empty": "لا توجد وجبات مسجلة اليوم",
+        "activity_empty": "لا يوجد نشاط مسجل اليوم",
+        "wellbeing_empty": "سجل حالتك لرؤية منحنى الحالة المزاجية"
+      },
+      "units": {
+        "glucose": "ملغ/دسل",
+        "water": "أكواب",
+        "active_min": "دقيقة نشاط",
+        "sleep": "ساعة نوم"
+      },
+      "placeholders": {
+        "no_readings": "لا توجد قراءات بعد",
+        "meals_logged": "تم تسجيل {{count}} وجبات",
+        "sessions_logged": "{{count}} جلسات اليوم",
+        "sleep_last_night": "{{count}} ساعة نوم الليلة الماضية",
+        "activity_example": "مثال: قفز الحبل",
+        "duration_example": "٣٠",
+        "calories_example": "٢٠٠",
+        "carbs_example": "مثال: ٤٥",
+        "meal_description_example": "مثال: أرز مع دجاج"
+      },
+      "pdf": {
+        "date_label": "تاريخ التقرير",
+        "period_label": "الفترة",
+        "value": "القيمة",
+        "unit": "الوحدة",
+        "timing_col": "التوقيت",
+        "meal_type": "نوع الوجبة",
+        "carbs": "كربوهيدرات",
+        "activity_col": "النشاط",
+        "duration": "المدة",
+        "intensity": "الشدة",
+        "mood_col": "المزاج",
+        "sleep_col": "النوم"
+      },
+      "pdf_title": "تقرير يومي (CareAlly)",
+      "of_goal": "من الهدف",
+      "steps_today": "خطوة اليوم",
+      "weekly_overview": "نظرة عامة أسبوعية",
+      "timing": {
+        "fasting": "صائم",
+        "before_breakfast": "قبل الفطور",
+        "after_breakfast": "بعد الفطور",
+        "before_lunch": "قبل الغداء",
+        "after_lunch": "بعد الغداء",
+        "before_dinner": "قبل العشاء",
+        "after_dinner": "بعد العشاء",
+        "bedtime": "وقت النوم",
+        "random": "عشوائي",
+        "night": "بالليل"
+      },
+      "meal_type": {
+        "breakfast": "فطور",
+        "lunch": "غداء",
+        "dinner": "عشاء",
+        "snack": "وجبة خفيفة"
+      },
+      "carb_level": {
+        "none": "بدون",
+        "low": "قليل",
+        "medium": "متوسط",
+        "high": "كثير"
+      },
+      "intensity": {
+        "light": "خفيف",
+        "moderate": "متوسط",
+        "intense": "شاق"
+      },
+      "mood": {
+        "great": "ممتاز",
+        "good": "جيد",
+        "neutral": "عادي",
+        "tired": "متعب",
+        "stressed": "مضغوط",
+        "anxious": "قلق"
+      },
+      "hypo_symptoms": {
+        "dizziness": "دوخة",
+        "sweating": "تعرق",
+        "shaking": "رجفة",
+        "hunger": "جوع",
+        "palpitations": "خفقان",
+        "confusion": "ارتباك"
+      },
+      "hyper_symptoms": {
+        "thirst": "عطش",
+        "urination": "تبول متكرر",
+        "blurred": "تشوش الرؤية",
+        "fatigue": "إرهاق",
+        "headache": "صداع",
+        "nausea": "غثيان"
+      },
+      "sleep_quality": {
+        "poor": "ضعيف",
+        "fair": "مقبول",
+        "good": "جيد",
+        "excellent": "ممتاز"
+      },
+      "activities": {
+        "walking": "مشي",
+        "running": "جري",
+        "cycling": "ركوب الدراجة",
+        "swimming": "سباحة",
+        "judo": "جودو",
+        "football": "كرة قدم",
+        "basketball": "كرة سلة",
+        "yoga": "يوغا",
+        "gym": "نادي رياضي",
+        "dancing": "رقص",
+        "hiking": "تنزه",
+        "other": "آخر"
+      },
+      "intensity_desc": {
+        "light": "سهل، بدون عرق",
+        "moderate": "بعض المجهود، عرق خفيف",
+        "intense": "مجهود شاق، عرق كثيف"
+      },
+      "labels": {
+        "calories_burned": "السعرات الحرارية المحروقة",
+        "calories_burned_opt": "السعرات الحرارية المحروقة (اختياري)",
+        "intensity": "الشدة",
+        "today_sessions": "جلسات اليوم",
+        "carbs_optional": "كربوهيدرات (جم) — اختياري",
+        "description_optional": "الوصف — اختياري",
+        "today_meals": "وجبات اليوم",
+        "meal": "وجبة"
+      },
+      "carb_desc": {
+        "none": "بدون كربوهيدرات / ماء فقط",
+        "low": "سلطة، بيض، لحم",
+        "medium": "أرز، خبز (كمية صغيرة)",
+        "high": "معكرونة، حلويات، خبز"
+      }
+    },
+    "explore": {
+      "title": "اكتشف",
+      "search": "البحث عن أنشطة...",
+      "filters": {
+        "all": "الكل",
+        "running": "الجري",
+        "yoga": "اليوجا",
+        "cycling": "ركوب الدراجات"
+      }
+    },
+    "nearby": {
+      "title": "طبي بالقرب مني",
+      "search": "بحث عن مستشفيات، عيادات...",
+      "emergency_alert": "🚨 حالة طوارئ",
+      "patient_sos": "مريض يطلب المساعدة",
+      "distance": "على بعد",
+      "sos_title": "نداء استغاثة: مريض يحتاج مساعدة",
+      "sos_desc": "تم بث تنبيه طارئ بالقرب منك. هل يمكنك المساعدة؟",
+      "sos_sms": "رأيت نداء استغاثتك على الخريطة. أنا قريب ويمكنني المساعدة."
+    },
+    "doctor": {
+      "title": "طبيبي",
+      "find": "ابحث عن طبيب",
+      "search_placeholder": "بحث بالاسم أو التخصص...",
+      "no_doctors": "لم يتم العثور على أطباء",
+      "available": "الأطباء المتاحون",
+      "next_appointment": "الموعد القادم",
+      "no_appointments": "لا توجد مواعيد قادمة",
+      "contact": "التواصل",
+      "notes": "التعليمات والملاحظات الطبية",
+      "no_notes": "لا توجد ملاحظات طبية مسجلة بعد.",
+      "filter": "تصفية بالاسم...",
+      "away": "{{distance}} بعيد",
+      "no_doctors_area": "لا يوجد أطباء متاحون في منطقتك بعد. حاول البحث عن اسم آخر.",
+      "phone": "الهاتف",
+      "workplace": "مكان العمل",
+      "new_note_title": "ملاحظة طبية جديدة",
+      "note_placeholder": "اكتب ملاحظاتك أو تعليماتك للمريض...",
+      "send_note": "إرسال الملاحظة",
+      "appointment_types": {
+        "remote": "عن بعد",
+        "in_person": "حضورياً"
+      },
+      "patients": {
+        "title": "مرضاي",
+        "search_placeholder": "بحث بالاسم أو رقم الهاتف...",
+        "add_patient": "إضافة مريض",
+        "pending_requests": "طلبات معلقة",
+        "accepted_patients": "المرضى المعتمدين",
+        "no_pending": "لا توجد طلبات معلقة",
+        "no_accepted": "لا يوجد مرضى معتمدين",
+        "search_error": "خطأ في البحث",
+        "add_error": "تعذر إضافة المريض",
+        "add_success": "تم إضافة المريض بنجاح",
+        "accept_error": "تعذر قبول الطلب",
+        "already_linked": "هذا المريض موجود بالفعل في قائمتك.",
+        "info": "معلومة",
+        "error": "خطأ",
+        "success": "تم بنجاح"
+      }
+    },
+    "sos": {
+      "title": "استغاثة SOS",
+      "instruction": "المساعدة في حالات الطوارئ على بعد ضغطة واحدة.",
+      "call_contact": "اتصال بجهة طوارئ",
+      "send_sms": "إرسال تنبيه SMS",
+      "sms_subtitle": "إرسال موقعك تنبيهاً بالرسائل",
+      "broadcast": "بث للمجتمع المحيط",
+      "broadcast_subtitle": "مشاركة موقعك على الخريطة",
+      "broadcasting": "جاري بث الموقع",
+      "broadcasting_subtitle": "اضغط لإيقاف البث",
+      "nearby_subtitle": "ابحث عن مستشفيات، أطباء وصيدليات",
+      "nearby": "البحث عن مساعدة قريبة",
+      "danger_text": "إذا كنت في خطر حقيقي، يرجى الاتصال بخدمات الطوارئ الوطنية (مثل 14 للحماية المدنية).",
+      "no_contact_warning": "لم يتم تحديد جهة اتصال للطوارئ. يرجى إضافة واحدة في ملفك الصحي.",
+      "or_divider": "——— أو ———",
+      "broadcast_message": "🆘 تنبيه طوارئ: {{name}} بحاجة إلى مساعدة فورية! اتصل أو ساعد إذا كنت قريباً."
+    },
+    "health_profile": {
+      "title": "الملف الصحي",
+      "save_success": "تم تحديث الملف الصحي!",
+      "sections": {
+        "personal": "المعلومات الشخصية",
+        "medical": "المعلومات الطبية",
+        "emergency": "جهة اتصال الطوارئ"
+      },
+      "fields": {
+        "full_name": "الاسم الكامل",
+        "phone": "رقم الهاتف",
+        "gender": "الجنس",
+        "birth_date": "تاريخ الميلاد",
+        "weight": "الوزن (كغ)",
+        "height": "الطول (سم)",
+        "wilaya": "الولاية",
+        "commune": "البلدية / المدينة",
+        "diabetes_type": "نوع السكري",
+        "diagnosis_year": "سنة التشخيص",
+        "hba1c": "متوسط التراكمي (%)",
+        "target_min": "الحد الأدنى المستهدف (ملغ/دسل)",
+        "target_max": "الحد الأقصى المستهدف (ملغ/دسل)",
+        "insulin_regimen": "نظام الأنسولين",
+        "activity_level": "مستوى النشاط",
+        "uses_cgm": "يستخدم جهاز مراقبة السكر",
+        "hypertension": "ارتفاع ضغط الدم",
+        "dyslipidemia": "اختلال الدهون",
+        "contact_name": "اسم جهة الاتصال",
+        "contact_phone": "رقم جهة الاتصال",
+        "select_date": "اختر تاريخاً"
+      }
+    },
+    "profile": {
+      "title": "الملف الشخصي",
+      "bio_placeholder": "اكتب شيئاً عن نفسك...",
+      "edit_btn": "تعديل الملف الشخصي",
+      "stats": {
+        "glucose": "متوسط السكر",
+        "range": "ضمن الهدف",
+        "posts": "منشورات"
+      }
+    },
+    "instructions": {
+      "title": "التعليمات",
+      "subtitle": "توجيهات من فريق الرعاية الصحية"
+    }
+  },
+  "doctor": {
+    "tabs": {
+      "feed": "الرئيسية",
+      "patients": "المرضى",
+      "explore": "اكتشف",
+      "nearby": "بالقرب مني",
+      "profile": "الملف الشخصي"
+    },
+    "patients": {
+      "title": "مرضاك",
+      "active_count": "{{count}} مريض نشط",
+      "add": "إضافة",
+      "filter": "تصفية بالاسم أو الهاتف...",
+      "pending": "طلبات معلقة",
+      "my_patients": "مرضاي",
+      "empty": "لم يتم العثور على مرضى.",
+      "already_linked": "هذا المريض موجود بالفعل في القائمة.",
+      "add_error": "تعذر إضافة المريض.",
+      "add_success": "تم إضافة المريض بنجاح.",
+      "accept_error": "تعذر قبول الطلب.",
+      "search_error": "خطأ في البحث",
+      "search_exception": "تعذر تنفيذ البحث. حاول مرة أخرى.",
+      "add_new": "إضافة مريض جديد",
+      "search_placeholder": "البحث بالاسم أو رقم الهاتف...",
+      "link": "ربط",
+      "accept": "قبول"
+    },
+    "detail": {
+      "tabs": {
+        "glucose": "السكري",
+        "nutrition": "التغذية",
+        "activity": "النشاط",
+        "wellbeing": "الحالة",
+        "notes": "ملاحظات",
+        "ai": "مراجعة الذكاء الاصطناعي"
+      },
+      "ai_review": {
+        "title": "ملخص سريري",
+        "analyzing": "جاري تحليل الاتجاهات...",
+        "suggested_feedback": "ملاحظات مقترحة",
+        "refresh": "تحديث مراجعة الذكاء الاصطناعي",
+        "generate": "إنشاء مراجعة",
+        "assistant_title": "مساعد الطبيب الذكي",
+        "assistant_desc": "احصل على ملخص طبي محترف وملاحظات مقترحة لهذا المريض بناءً على سجلاته الحديثة."
+      },
+      "send_note": "إرسال ملاحظة جديدة",
+      "highlights": {
+        "a1c": "التراكمي",
+        "weight": "الوزن",
+        "target": "المستهدف"
+      },
+      "note_sent": "تم إرسال الملاحظة للمريض.",
+      "note_error": "لم يتم حفظ الملاحظة.",
+      "not_found": "المريض غير موجود.",
+      "no_logs": "لا توجد سجلات لهذا الشهر.",
+      "no_activity": "لا توجد أنشطة مسجلة.",
+      "no_wellbeing": "لا يوجد سجل للحالة العامة.",
+      "no_notes": "لا توجد أي ملاحظات مسجلة بعد.",
+      "new_note_title": "ملاحظة طبية جديدة",
+      "note_placeholder": "اكتب ملاحظاتك أو تعليماتك للمريض..."
+    },
+    "profile": {
+      "title": "الملف الشخصي",
+      "not_set": "غير محدد",
+      "specialization_not_set": "التخصص غير محدد",
+      "yrs": "سنوات",
+      "exp": "خبرة",
+      "professional_details": "التفاصيل المهنية",
+      "specialization": "التخصص *",
+      "choose_specialty": "اختر التخصص",
+      "medical_license": "رقم الرخصة الطبية",
+      "license_number": "رقم الرخصة",
+      "workplace": "مكان العمل الحالي",
+      "workplace_placeholder": "اسم المستشفى/العيادة",
+      "experience_years": "سنوات الخبرة",
+      "experience_placeholder": "مثال 10",
+      "bio": "السيرة المهنية",
+      "bio_placeholder": "اكتب نبذة عنك...",
+      "work_location": "موقع العمل",
+      "location_desc": "حدد موقع عيادتك أو المستشفى ليتمكن المرضى من العثور عليك على الخريطة.",
+      "set_current_position": "تعيين الموقع الحالي",
+      "latitude": "خط العرض (Latitude)",
+      "longitude": "خط الطول (Longitude)",
+      "specialty_label": "التخصص",
+      "license_label": "الرخصة",
+      "workplace_label": "العمل",
+      "experience_label": "الخبرة",
+      "no_bio": "لم يتم تقديم سيرة",
+      "personal_info": "المعلومات الشخصية",
+      "full_name": "الاسم الكامل",
+      "phone": "الهاتف",
+      "dob": "تاريخ الميلاد",
+      "gender": "الجنس",
+      "wilaya": "الولاية *",
+      "select_wilaya": "اختر الولاية",
+      "commune": "البلدية *",
+      "select_commune": "اختر البلدية",
+      "select_wilaya_first": "يرجى اختيار ولاية أولا"
+    },
+    "stats": {
+      "title": "إحصائيات الإدارة",
+      "subtitle": "نظرة عامة على المنصة",
+      "logout": "تسجيل خروج",
+      "total_patients": "إجمالي المرضى",
+      "active_doctors": "الأطباء النشطين",
+      "avg_steps": "متوسط الخطوات",
+      "instructions_sent": "التعليمات المرسلة",
+      "recent_activity": "النشاط الأخير"
+    }
+  },
+  "profile_setup": {
+    "personal_info": "المعلومات الشخصية",
+    "professional_info": "المعلومات المهنية",
+    "diabetes_info": "معلومات السكري",
+    "step": "الخطوة",
+    "of": "من",
+    "upload_failed": "فشل الرفع",
+    "upload_error": "حدث خطأ أثناء حفظ الصورة.",
+    "required": "مطلوب",
+    "enter_full_name": "يرجى إدخال اسمك الكامل.",
+    "select_birth_date": "يرجى اختيار تاريخ ميلادك.",
+    "select_gender": "يرجى اختيار الجنس.",
+    "select_wilaya": "يرجى اختيار الولاية.",
+    "select_commune": "يرجى اختيار البلدية.",
+    "select_diabetes_type": "يرجى اختيار نوع السكري.",
+    "select_specialization": "يرجى تقديم التخصص والرخصة الطبية.",
+    "basic_details": "التفاصيل الأساسية",
+    "photo_hint": "يوصى بصورة احترافية",
+    "body_measurements": "قياسات الجسم",
+    "location": "الموقع",
+    "credentials": "البيانات المهنية",
+    "professional_bio": "السيرة المهنية",
+    "diagnosis": "التشخيص",
+    "glucose_targets": "أهداف الجلوكوز (ملغ/دسل)",
+    "treatment": "العلاج",
+    "lifestyle": "نمط الحياة والأمراض المصاحبة",
+    "emergency_contact": "جهة اتصال الطوارئ",
+    "bmi": "مؤشر كتلة الجسم",
+    "step_progress": "الخطوة {{current}} من {{total}}",
+    "back": "رجوع",
+    "continue": "متابعة",
+    "save_continue": "حفظ ومتابعة",
+    "male": "ذكر",
+    "female": "أنثى",
+    "bmi_label": "مؤشر كتلة الجسم",
+    "specialization_label": "التخصص *",
+    "specialization_placeholder": "اختر تخصصك",
+    "medical_license_label": "رقم الترخيص الطبي *",
+    "medical_license_placeholder": "رقم الترخيص أو الهوية",
+    "hospital_placeholder": "اسم المستشفى أو العيادة",
+    "bio_placeholder": "صف خبرتك وتركيزك باختصار...",
+    "diabetes_type_label": "نوع السكري *",
+    "diagnosis_year_label": "سنة التشخيص",
+    "hba1c_label": "آخر تحليل HbA1c (%)",
+    "min_label": "الأدنى",
+    "max_label": "الأقصى",
+    "insulin_regimen_label": "نظام الأنسولين",
+    "uses_cgm_label": "يستخدم جهاز مراقبة السكر (CGM)",
+    "hypertension_label": "ارتفاع ضغط الدم",
+    "dyslipidemia_label": "اضطراب دهون الدم (الكوليسترول)",
+    "contact_name_label": "اسم جهة الاتصال",
+    "contact_phone_label": "رقم جهة الاتصال",
+    "family_friend_placeholder": "قريب أو صديق",
+    "diagnosis_year_placeholder": "2015",
+    "hba1c_placeholder": "7.2",
+    "name_placeholder": "أحمد بن علي",
+    "phone_placeholder": "+213 555 000 000",
+    "weight_placeholder": "70",
+    "height_placeholder": "175",
+    "min_placeholder": "80",
+    "max_placeholder": "180",
+    "select_date": "اختر التاريخ",
+    "full_name_label": "الاسم الكامل *",
+    "phone_label": "رقم الهاتف",
+    "birth_date_label": "تاريخ الميلاد *",
+    "gender_label": "الجنس *",
+    "weight_label": "الوزن (كغ)",
+    "height_label": "الطول (سم)",
+    "wilaya_label": "الولاية *",
+    "commune_label": "البلدية *",
+    "hospital_label": "المستشفى أو العيادة",
+    "experience_label": "سنوات الخبرة",
+    "bio_label": "السيرة المهنية",
+    "wilaya_placeholder": "اختر الولاية",
+    "commune_placeholder": "اختر البلدية",
+    "commune_error": "يرجى اختيار ولاية أولا",
+    "experience_placeholder": "مثال: 10"
+  },
+  "admin": {
+    "tabs": {
+      "stats": "إحصائيات",
+      "users": "مستخدمين",
+      "posts": "منشورات",
+      "map": "الخريطة"
+    },
+    "users": {
+      "title": "قائمة المستخدمين",
+      "search": "بحث بالاسم...",
+      "role_all": "الكل",
+      "role_patient": "المرضى",
+      "role_doctor": "الأطباء",
+      "role_admin": "المشرفين",
+      "joined": "انضم",
+      "phone": "الهاتف",
+      "no_users": "لا يوجد مستخدمين."
+    },
+    "posts": {
+      "title": "إدارة المحتوى",
+      "search": "البحث في المنشورات...",
+      "delete_confirm_title": "حذف المنشور",
+      "delete_confirm_desc": "هل أنت متأكد أنك تريد حذف هذا المنشور نهائياً؟",
+      "no_posts": "لا توجد منشورات.",
+      "author": "الكاتب",
+      "target_role": "الفئة المستهدفة"
+    },
+    "map": {
+      "title": "خريطة المتابعة",
+      "active_doctors": "الأطباء النشطين",
+      "emergencies": "الطوارئ",
+      "sos_alert": "نداء استغاثة",
+      "doctor": "عيادة طبيب"
+    }
+  }
+}
